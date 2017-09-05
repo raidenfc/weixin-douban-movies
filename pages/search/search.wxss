@@ -1,0 +1,70 @@
+/* search.wxss */
+.search {
+  padding: 30rpx 25rpx;
+  box-sizing: border-box; 
+  background-color: #44bb57;
+  overflow: hidden;
+}
+
+.search .back-index {
+  float: right;
+  margin-left: 10rpx;
+  width: 75rpx;
+  height: 60rpx; 
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.search input {
+  padding: 0 15rpx;
+  background-color: #f5f5f5; 
+  border-radius: 8rpx;
+  box-sizing: border-box; 
+  height: 60rpx; 
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #9b9b9b;
+}
+
+.movie-list .movie-box {
+  padding: 15rpx 20rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  overflow: hidden;
+}
+
+.movie-list .movie-box .img {
+  float: left;
+  width: 77rpx;
+  height: 108rpx;
+}
+
+.movie-list .movie-box .info {
+  padding-left: 20rpx;
+  overflow: hidden;
+}
+
+.movie-list .movie-box .info .title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.movie-list .movie-box .info .rating {
+  font-size: 20rpx;
+  color: #9b9b9b;
+}
+
+.hot-tag {
+  padding: 40rpx;
+  color: #838383;
+}
+
+.hot-tag .tag {
+  display: inline-block;
+  padding: 1rpx 10rpx;
+  margin: 12rpx 12rpx 0 0;
+  border: 1rpx solid #838383;
+  border-radius: 8rpx;
+  font-size: 25rpx;
+}

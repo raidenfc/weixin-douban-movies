@@ -1,0 +1,30 @@
+<!--search.wxml-->
+<view class="page">
+  <view class="search">
+    <view bindtap="bindViewIndex" class="back-index">取消</view>
+    <input placeholder="电影/电视剧/影人" focus="true" bindinput="bindinputSearch" />
+  </view>
+
+  <block wx:if="{{ movieList.length <= 0 }}">
+    
+    <view class="hot-tag">
+      <view class="title">热门推荐：</view>
+      <view bindtap="bindSearch" id="{{ item }}" wx:for="{{ hotTagList }}" wx:key="*this" class="tag">{{ item }}</view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <scroll-view scroll-y style="height: 1040rpx;" enable-back-to-top="true">
+      <view class="movie-list">
+        <view bindtap="bindViewMovie" wx:key="{{ item.id }}" id="{{ item.id }}" wx:for="{{ movieList }}" class="movie-box">
+          <image class="img" src="{{ item.images.medium }}"></image>
+          <view class="info">
+            <view class="title">{{ item.title }}</view>
+            <view class="rating">{{ item.rating.average }} / {{ item.year }}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+
+</view>

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/movieDetail/movieDetail",
+    "pages/moviePage/moviePage",
+    "pages/movieMan/movieMan",
+    "pages/search/search",
+    "pages/rank/rank"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#44bb57",
+    "backgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#44bb57",
+    "backgroundColor": "#f7f7f7",
+    "borderStyle": "#b2b2b2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "dist/images/popular_icon.png",
+        "selectedIconPath": "dist/images/popular_active_icon.png",
+        "text": "热映"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "dist/images/top_icon.png",
+        "selectedIconPath": "dist/images/top_active_icon.png",
+        "text": "口碑"
+      }
+    ]
+  }
+}

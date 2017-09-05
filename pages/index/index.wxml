@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class="page">
+
+  <view class="search">
+    <view bindtap="bindViewSearch" class="search-btn">电影/电视剧/影人</view>
+  </view>
+
+  <view class="page-nav">
+    <view bindtap="navSelect" id="1" class="nav {{ navSc === 1 ? 'select' : '' }}">正在热映</view>
+    <view bindtap="navSelect" id="2" class="nav {{ navSc === 2 ? 'select' : '' }}">即将上映</view>
+  </view>
+
+  <scroll-view scroll-y style="height: 950rpx;" bindscrolltolower="lower" enable-back-to-top="true">
+
+    <block wx:if="{{ navSc === 1 }}">
+      <view class="box-list">
+        <view wx:for="{{ inTheatersList }}" wx:key="{{ item.id }}" id="{{ item.id }}" class="box" bindtap="bindViewDetail">
+          <image class="box-img" src="{{ item.images.large }}"></image>
+          <view class="box-info">
+            <view class="title">{{ item.title }}</view>
+            <view class="evaluation">
+              <view class="evaluation-star star-{{ item.rating.stars / 10 }}">
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+              </view> 
+              <block wx:if="{{ item.rating.average > 0 }}"> {{ item.rating.average }}</block>
+            </view>
+            <view class="director">导演：
+              <block wx:for="{{ item.directors }}" wx:for-item="itemDirectors" wx:key="*this">{{ itemDirectors.name }} </block>
+            </view>
+            <view class="starring">主演：
+              <block wx:for="{{ item.casts }}" wx:for-item="itemCasts" wx:key="*this">{{ itemCasts.name }} {{ index === item.casts.length - 1 ? '' : '/' }} </block>
+            </view>
+            <view class="starring">类型：
+              <block wx:for="{{ item.genres }}" wx:for-item="itemGenres" wx:key="*this">{{ itemGenres }} {{ index === item.genres.length - 1 ? '' : '/' }} </block>
+            </view>
+            <view class="seen">{{ item.collect_count }} 看过</view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:if="{{ navSc === 2 }}">
+      <view class="box-list">
+        <view wx:for="{{ comingSoonList }}" wx:key="{{ item.id }}" id="{{ item.id }}" class="box" bindtap="bindViewDetail">
+          <image class="box-img" src="{{ item.images.medium }}"></image>
+          <view class="box-info">
+            <view class="title">{{ item.title }}</view>
+            <view class="evaluation">
+              <view class="evaluation-star star-{{ item.rating.stars / 10 }}">
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+              </view> 
+              <block wx:if="{{ item.rating.average > 0 }}"> {{ item.rating.average }}</block>
+            </view>
+            <view class="director">导演：
+              <block wx:for="{{ item.directors }}" wx:for-item="itemDirectors" wx:key="*this">{{ itemDirectors.name }} </block>
+            </view>
+            <view class="starring">主演：
+              <block wx:for="{{ item.casts }}" wx:for-item="itemCasts" wx:key="*this">{{ itemCasts.name }} {{ index === item.casts.length - 1 ? '' : '/' }} </block>
+            </view>
+            <view class="seen">{{ item.collect_count }} 看过</view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </scroll-view>
+
+</view>

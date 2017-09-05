@@ -1,0 +1,50 @@
+<!--rank.wxml-->
+<view class="page">
+  <view class="nav">
+    <view bindtap="bindrankTop" id="0-50" class="c {{ start === 0 ? 'select' : '' }}">Top1-50</view>
+    <view bindtap="bindrankTop" id="51-100" class="c {{ start === 51 ? 'select' : '' }}">51-100</view>
+    <view bindtap="bindrankTop" id="101-150" class="c {{ start === 101 ? 'select' : '' }}">101-150</view>
+    <view bindtap="bindrankTop" id="151-200" class="c {{ start === 151 ? 'select' : '' }}">151-200</view>
+    <view bindtap="bindrankTop" id="201-250" class="c {{ start === 201 ? 'select' : '' }}">201-250</view>
+  </view>
+
+  <scroll-view scroll-y style="height: 1040rpx;" enable-back-to-top="true">
+    <view class="rank-list">
+      <view bindtap="bindMovieDetail" wx:for="{{ rankList }}" wx:key="{{ item.id }}" id="{{ item.id }}" class="rank-box">
+        <view class="no">
+          <view class="f">{{ (start === 0 ? 1 : start) + index }}</view>
+        </view>
+
+        <view class="box-inner">
+          <image class="img" src="{{ item.images.medium }}"></image>
+          <view class="info">
+
+            <view class="title">{{ item.title }}</view>
+
+            <view class="evaluation">
+              <view class="evaluation-star star-{{ item.rating.stars / 10 }}">
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+              </view> 
+              <block wx:if="{{ item.rating.average > 0 }}"> {{ item.rating.average }}</block>
+              <block wx:else>暂无评分</block>
+            </view>
+
+            <view class="director">导演：
+              <block wx:for="{{ item.directors }}" wx:for-item="itemDirectors" wx:key="*this">{{ itemDirectors.name }} </block>
+            </view>
+
+            <view class="starring">主演：
+              <block wx:for="{{ item.casts }}" wx:for-item="itemCasts" wx:key="*this">{{ itemCasts.name }} {{ index === item.casts.length - 1 ? '' : '/' }} </block>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

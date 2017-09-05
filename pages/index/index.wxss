@@ -1,0 +1,71 @@
+/**index.wxss**/
+
+.search {
+  padding: 30rpx 25rpx;
+  box-sizing: border-box; 
+  background-color: #44bb57;
+}
+
+.search .search-btn {
+  padding: 0 15rpx;
+  height: 60rpx; 
+  line-height: 60rpx;
+  color: #9b9b9b;
+  border-radius: 8rpx;
+  box-sizing: border-box; 
+  background-color: #f5f5f5; 
+  font-size: 30rpx;
+  color: #9b9b9b;
+}
+
+.page-nav {
+  position: relative;
+  z-index: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.page-nav .nav {
+  display: inline-block;
+  width: 50%;
+  border-bottom: 4rpx solid #fff;
+  text-align: center;
+  font-size: 30rpx;
+  color: #9b9b9b;
+}
+
+.page-nav .nav.select {
+  border-bottom: 4rpx solid #494949;
+  color: #616161;
+  font-weight: bold;
+}
+
+.box {
+  padding: 40rpx 30rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  overflow: hidden;
+}
+
+.box .box-img {
+  float: left;
+  width: 160rpx;
+  height: 224rpx;
+}
+
+.box .box-info {
+  padding-left: 30rpx;
+  color: #9b9b9b;
+  font-size: 22rpx;
+  overflow: hidden;
+}
+
+.box .box-info .title {
+  color: #494949;
+  font-size: 33rpx;
+  font-weight: bold;
+}
+
+.box .box-info .seen {
+  margin-top: 5rpx;
+  color: #4c4c4c;
+}

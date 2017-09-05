@@ -1,0 +1,155 @@
+<!--movieDetail.wxml-->
+<view class="page">
+
+  <view class="movie-avatar">
+    <image class="avatar" src="{{ detail.images.large }}"></image>
+    <view class="avatar-bg" style="background-image:url({{ detail.images.large }});"></view>
+  </view>
+
+  <view class="movie-info">
+
+    <view class="title">{{ detail.title }}</view>
+
+    <view class="cite">
+      <text>
+        <block wx:for="{{ detail.countries }}"> {{ item }}  / </block>
+        <block wx:for="{{ detail.genres }}"> {{ item }} {{ index === detail.genres.length - 1 ? '' : '/' }} </block>
+      </text>
+      <text>原名：{{ detail.original_title }}</text>
+      <text>上映年份: {{ detail.year }}</text>
+    </view>
+
+    <view class="douban-evaluation">
+      <view class="tit">豆瓣评分</view>
+      <view class="evaluation-num">{{ detail.rating.average }}</view>
+      <view class="evaluation-star star-{{ detail.rating.stars / 10 }}">
+        <view class="star"></view>
+        <view class="star"></view>
+        <view class="star"></view>
+        <view class="star"></view>
+        <view class="star"></view>
+      </view>
+      <view class="evaluation-people">{{ detail.ratings_count }} 人</view>
+    </view>
+
+    <view class="movie-box movie-story">
+      <view class="title">剧情简介</view>
+      {{ detail.summary }}
+    </view>
+
+    <view class="movie-box shadowman">
+      <view class="title">影人</view>
+      <scroll-view scroll-x style="width: 100%; white-space: nowrap; display: flex;">
+
+        <view bindtap="viewMovieMan" class="img-box" wx:for="{{ detail.directors }}" wx:key="*this" id="{{ item.id }}">
+          <image class="shadowman-img" src="{{ item.avatars.large }}"></image>
+          <view class="shadowman-name">{{ item.name }}</view>
+          <view class="shadowman-yx">导演</view>
+        </view>
+        
+        <view bindtap="viewMovieMan" class="img-box" wx:for="{{ detail.casts }}" wx:key="*this" id="{{ item.id }}">
+          <image class="shadowman-img" src="{{ item.avatars.large }}"></image>
+          <view class="shadowman-name">{{ item.name }}</view>
+          <view class="shadowman-yx">主演</view>
+        </view>
+
+        <!-- <view class="img-box">
+          <navigator open-type="navigateTo">
+            <view class="more">
+              <view class="xt">
+                <view class="t">全部</view>
+                <view>20人</view>
+              </view>
+            </view>
+          </navigator>
+        </view> -->
+
+      </scroll-view>
+    </view>
+
+    <view class="movie-box movie-tag">
+      <view class="title">标签</view>
+      <view wx:for="{{ detail.genres }}" class="tag">{{ item }}</view>
+    </view>
+
+    <!-- <view class="movie-box theorist">
+      <view class="title">预告片/剧照</view>
+      <scroll-view scroll-x style="width: 100%; white-space: nowrap; display: flex;">
+        
+        <view class="img-box" wx:for="{{ detail.casts }}" wx:key="*this" id="{{ item.id }}">
+          <image mode="aspectFill" class="theorist-img" src="http://img5.mtime.cn/pi/2016/12/13/180132.73382474_1000X1000.jpg"></image>
+        </view>
+
+        <view class="img-box">
+          <navigator open-type="navigateTo">
+            <view class="more">
+              <view class="xt">
+                <view class="t">全部剧照</view>
+                <view>220张</view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+      </scroll-view>
+    </view> -->
+
+  </view>
+
+  <view class="appreciation">
+
+    <view class="short-review movie-box">
+      <view class="title">短评(1988)</view>
+
+      <view class="review-box">
+        <view class="review-avatar"><image src="https://img3.doubanio.com/icon/u2677183-26.jpg"></image></view>
+        <view class="review-info">
+          <view class="review-h">
+            <view class="name">root</view>
+            <view class="evaluation-star star-4">
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+            </view>
+          </view>
+
+          <view class="review-time">2017-02-09</view>
+
+          <view class="review-val">
+            # 没有豆瓣高级api权限，无法获取 #
+          </view>
+        </view>
+      </view>
+
+      <view class="more"><navigator open-type="navigateTo">查看更多短评</navigator></view>
+
+    </view>
+<!-- 
+    <view class="shadow-evaluation movie-box">
+      <view class="title">影评(80)</view>
+
+      <view class="review-box">
+        <view class="review-title"><navigator open-type="navigateTo">没有豆瓣高级api权限，无法获取</navigator></view>
+        <view class="review-info">
+          <view class="review-h">
+            <view class="name">name</view>
+            <view class="evaluation-star star-5">
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+              <view class="star"></view>
+            </view>
+            <view class="good">33有用</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="more"><navigator open-type="navigateTo">查看更多影评</navigator></view>
+    </view> -->
+
+  </view>
+
+</view>

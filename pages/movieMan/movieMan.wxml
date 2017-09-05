@@ -1,0 +1,73 @@
+<!--movieMan.wxml-->
+<view class="page">
+
+  <view class="movie-avatar">
+    <image class="avatar" src="{{ detail.avatars.large }}"></image>
+    <view class="avatar-bg" style="background-image:url({{ detail.avatars.large }});"></view>
+  </view>
+
+  <view class="movie-info">
+
+    <view class="name">{{ detail.name }}</view>
+    <view class="name-en">{{ detail.name_en }}</view>
+    <view class="name-dz">{{ detail.born_place }}</view>
+
+    <view class="movie-box shadowman">
+      <view class="title">代表作品</view>
+      <scroll-view scroll-x style="width: 100%; white-space: nowrap; display: flex;">
+
+        <view bindtap="viewMovieDetail" class="img-box" wx:for="{{ detail.works }}" wx:key="*this" id="{{ item.subject.id }}">
+          <image class="shadowman-img" src="{{ item.subject.images.large }}"></image>
+          <view class="shadowman-name">{{ item.subject.title }}</view>
+          <view class="evaluation">
+              <view class="evaluation-star star-{{ item.subject.rating.stars / 10 }}">
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+                <view class="star"></view>
+              </view> 
+              <block wx:if="{{ item.subject.rating.average > 0 }}"> {{ item.subject.rating.average }}</block>
+              <block wx:else>暂无评分</block>
+            </view>
+        </view>
+
+        <!-- <view class="img-box">
+          <navigator open-type="navigateTo">
+            <view class="more">
+              <view class="xt">
+                <view class="t">全部</view>
+                <view>20人</view>
+              </view>
+            </view>
+          </navigator>
+        </view> -->
+
+      </scroll-view>
+    </view>
+
+    <!-- <view class="movie-box theorist">
+      <view class="title">预告片/剧照</view>
+      <scroll-view scroll-x style="width: 100%; white-space: nowrap; display: flex;">
+        
+        <view class="img-box" wx:for="{{ detail.casts }}" wx:key="*this" id="{{ item.id }}">
+          <image mode="aspectFill" class="theorist-img" src="http://img5.mtime.cn/pi/2016/12/13/180132.73382474_1000X1000.jpg"></image>
+        </view>
+
+        <view class="img-box">
+          <navigator open-type="navigateTo">
+            <view class="more">
+              <view class="xt">
+                <view class="t">全部剧照</view>
+                <view>220张</view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+      </scroll-view>
+    </view> -->
+
+  </view>
+
+</view>

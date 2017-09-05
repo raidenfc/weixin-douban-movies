@@ -1,0 +1,283 @@
+/* movieMan.wxss */
+
+.movie-avatar {
+  position: relative;
+  width: 100%;
+  height: 645rpx;
+  overflow: hidden;
+}
+
+.avatar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  -webkit-filter: blur(15px);
+  -webkit-transform: scale(1.15);
+  opacity: 0.8;
+}
+
+.movie-avatar .avatar {
+  position: absolute;
+  top: 40rpx;
+  left: 50%;
+  z-index: 1;
+  margin: 0 0 0 -200rpx;
+  width: 400rpx;
+  height: 560rpx;
+}
+
+.movie-info {
+  position: relative;
+  padding: 40rpx;
+  background-color: #f4f5f9;
+}
+
+.movie-info .name {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #494949;
+}
+
+.movie-info .name-en {
+  font-size: 35rpx;
+  color: #4c4c4c;
+} 
+
+.movie-info .name-dz {
+  font-size: 25rpx;
+  color: #4c4c4c;
+}
+
+.movie-info .cite {
+  padding-right: 215rpx;
+}
+
+.movie-info .cite text {
+  display: block;
+  color: #9d9d9d;
+  font-size: 22rpx;
+}
+
+.movie-info .douban-evaluation {
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+}
+
+.douban-evaluation {
+  padding-top: 20rpx;
+  width: 170rpx;
+  height: 150rpx;
+  background: #fff;
+  box-shadow: #e9eaed 0 0 20rpx;
+  text-align: center;
+}
+
+.douban-evaluation .tit {
+  font-size: 20rpx;
+  color: #cecece;
+}
+
+.douban-evaluation .evaluation-people {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #a7a7a7;
+}
+
+.douban-evaluation .evaluation-num {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #494949;
+  font-weight: bold;
+}
+
+.movie-box {
+  padding-top: 60rpx;
+}
+
+.movie-box .title {
+  margin-bottom: 30rpx;
+  font-size: 25rpx;
+  color: #9b9b9b;
+  font-weight: bold;
+}
+
+.shadowman .img-box {
+  margin-right: 10rpx;
+  display: inline-block;
+  width: 200rpx;
+  height: 370rpx;
+  text-align: center;
+}
+
+.shadowman .img-box image {
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.shadowman .img-box .shadowman-name {
+  font-size: 25rpx;
+  color: #7d7d7e;
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shadowman .img-box .shadowman-yx {
+  font-size: 22rpx;
+  color: #9c9c9c;
+}
+
+.theorist .img-box {
+  margin-right: 10rpx;
+  display: inline-block;
+  height: 320rpx;
+}
+
+.theorist .img-box image {
+  height: 320rpx;
+}
+
+.appreciation {
+  padding: 40rpx;
+}
+
+.short-review .review-box {
+  overflow: hidden;
+  margin-bottom: 55rpx;
+}
+
+.short-review .review-box .review-avatar {
+  float: left;
+  width: 75rpx;
+}
+
+.short-review .review-box .review-avatar image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+}
+
+.short-review .review-box .review-info {
+  padding-left: 20rpx;
+  overflow: hidden;
+}
+
+.short-review .review-box .review-info .review-h .name {
+  display: inline-block;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #353535;
+}
+
+.short-review .review-box .review-info .review-time {
+  padding: 5rpx 0;
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+.short-review .review-box .review-info .review-val {
+  font-size: 28rpx;
+  color: #353535;
+  line-height: 40rpx;
+}
+
+.shadow-evaluation .more,
+.short-review .more {
+  padding: 30rpx 0;
+  text-align: center;
+  color: #42bd56;
+  font-size: 30rpx;
+}
+
+.shadow-evaluation .review-box {
+  margin-bottom: 40rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.shadow-evaluation .review-box .review-title {
+  font-size: 35rpx; 
+  color: #353535;
+  font-weight: bold;
+}
+
+.shadow-evaluation .review-box .review-info {
+  margin-bottom: 30rpx;
+}
+
+.shadow-evaluation .review-box .review-info .name {
+  margin-right: 10rpx;
+  display: inline-block;
+  font-size: 22rpx;
+  color: #646464;
+}
+
+.shadow-evaluation .review-box .review-info .good {
+  margin-left: 10rpx;
+  display: inline-block;
+  font-size: 22rpx;
+  color: #ccc;
+}
+
+.shadowman .img-box .more {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 75rpx;
+  width: 160rpx;
+  height: 225rpx;
+  background: #edeef1; 
+  text-align: center;
+  color: #a7a7a8;
+  font-size: 22rpx;
+}
+
+.shadowman .img-box .more .xt {
+  position: absolute;
+  top: 75rpx;
+  left: 48rpx;
+  width: 53rpx;
+  text-align: center;
+}
+
+.shadowman .img-box .more .xt .t {
+  padding-bottom: 5rpx;
+  margin-bottom: 5rpx;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 25rpx;
+}
+
+.theorist .img-box .more {
+  position: relative;
+  display: inline-block;
+  width: 320rpx;
+  height: 320rpx;
+  background: #edeef1; 
+  text-align: center;
+  color: #a7a7a8;
+  font-size: 22rpx;
+}
+
+.theorist .img-box .more .xt {
+  position: absolute;
+  top: 125rpx;
+  left: 105rpx;
+  width: 110rpx;
+  text-align: center;
+}
+
+.theorist .img-box .more .xt .t {
+  padding-bottom: 5rpx;
+  margin-bottom: 5rpx;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 25rpx;
+}
+
+.evaluation {
+  font-size: 20rpx;
+  color: #4c4c4c;
+}

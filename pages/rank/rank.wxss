@@ -1,0 +1,87 @@
+/* rank.wxss */
+.nav { 
+  height: 80rpx;
+  border-bottom: 1rpx solid #e1e1e1;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  color: #919191;
+ }
+
+.nav .c {
+  float: left;
+  margin: -1rpx 25rpx 0 25rpx;
+  width: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.nav .c.select {
+  color: #9a9a9a;
+  border-bottom: 1rpx solid #414141;
+}
+
+.rank-list {
+  padding: 115rpx 35rpx 0 35rpx;
+}
+
+.rank-list .rank-box {
+  margin: 5rpx 0 115rpx 0;
+}
+
+.rank-list .rank-box .no {
+  position: relative;
+  margin: 0 auto 55rpx auto;
+  width: 260rpx;
+  height: 2rpx;
+  background-color: #dfdfdf;
+}
+
+.rank-list .rank-box .no .f {
+  position: absolute;
+  left: 50%;
+  top: -12rpx;
+  margin-left: -35rpx;
+  width: 70rpx;
+  height: 25rpx;
+  background-color: #fff;
+  line-height: 25rpx;
+  font-size: 35rpx;
+  text-align: center;
+  font-style: italic;
+  color: #ff2452;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rank-list .box-inner {
+  padding: 35rpx;
+  border: 1px solid #d4d4d4;
+  border-radius: 8rpx;
+  overflow: hidden;
+  box-shadow: #f5f5f5 10rpx 10rpx 10rpx;
+}
+
+.rank-list .box-inner .img {
+  float: left;
+  width: 154rpx;
+  height: 214rpx;
+}
+
+.rank-list .box-inner .info {
+  padding-left: 30rpx;
+  overflow: hidden;
+  color: #9a9a9a;
+  font-size: 24rpx;
+}
+
+.rank-list .box-inner .info .title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #505050;
+}
+
+.rank-list .box-inner .info .rating {
+  font-size: 20rpx;
+  color: #9b9b9b;
+}
